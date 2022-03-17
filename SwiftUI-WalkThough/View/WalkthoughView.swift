@@ -24,14 +24,6 @@ struct WalkthoughView: View {
                 }
             }
         }
-        .onAppear(){
-            // Note: - Get All Records
-            print("Walk Though ")
-            walkThoughVM.getRecords()
-            currentPage = 1
-            
-            print(walkThoughVM.rows)
-        }
         .overlay(
             // Button...
             Button(action: {
@@ -39,7 +31,6 @@ struct WalkthoughView: View {
                 withAnimation(.easeInOut){
                     // checking....
                     if currentPage < walkThoughVM.countRows {
-                        print(" Next Ppage \(currentPage)")
                         currentPage += 1
                     } else if currentPage == walkThoughVM.countRows{
                         

@@ -11,7 +11,7 @@ class WalkThoughVM: ObservableObject {
     @Published var countRows: Int = 0
     
     init() {
-       //getRecords()
+       getRecords()
     } 
     
     func getRecords(){
